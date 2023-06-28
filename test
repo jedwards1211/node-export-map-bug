@@ -5,7 +5,9 @@ set -x
 echo package in local directory
 node -e 'require("my-package")'
 node -e 'import("my-package")'
+node -e 'import("my-package/foo.js")'
 
 echo equivalent package in node_modules
 node -e 'require("my-package2")'
 node -e 'import("my-package2")'
+node -e 'import("my-package2/foo.js")'
