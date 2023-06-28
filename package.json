@@ -1,0 +1,18 @@
+{
+  "name": "my-package",
+  "main": "dist/cjs/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "./test"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./*.js": {
+      "import": "./dist/esm/*.js",
+      "require": "./dist/cjs/*.js"
+    }
+  }
+}

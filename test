@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -x
+
+echo package in local directory
+node -e 'require("my-package")'
+node -e 'import("my-package")'
+
+echo equivalent package in node_modules
+node -e 'require("my-package2")'
+node -e 'import("my-package2")'
